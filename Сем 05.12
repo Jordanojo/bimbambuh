@@ -1,0 +1,38 @@
+import random
+def task1(x):
+    mins=x[0]+x[1]
+    index=0
+    for i in range(len(x)-1):
+        s=x[i]+x[i+1]
+        if s<=mins:
+            mins=s
+            index=i
+    return(index,index+1)
+    
+def test_task1():
+    if task1([0,1,2])==(0,1):
+        print("+")
+    else:
+        print("error, для [0,1,2], правильный ответ=(0,1)")
+
+    if task1([0,-1,2])==(0,1):
+        print("+")
+    else:
+        print("error, для [0,-1,-2], правильный ответ=(0,1)")
+        
+    if task1([1,-1,2])==(0,1):
+        print("+")
+    else:
+        print("error, для [1,-1,-2], правильный ответ=(0,1)")
+
+    if task1([3,-1,2])==(1,2):
+        print("+")
+    else:
+        print("error, для [3,-1,2], правильный ответ=(1,2)")
+
+    if task1([4,4,4])==(1,2):
+        print("+")
+    else:
+        print("error, для [4,4,4], правильный ответ=(1,2)")
+
+test_task1()
