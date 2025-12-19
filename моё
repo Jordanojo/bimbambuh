@@ -1,0 +1,12 @@
+n,m= (map(int, input(). split()))
+lst=[]
+for i in range(n):
+    row=(list(map(int,input().split())))
+    lst.append(row)
+for c in range(n):
+    for j in range(m):
+        if lst[i][j]<v_min:
+            n_min=c
+            c_min=j
+            v_min=lst[i][j]
+print(c,j)
